@@ -1,0 +1,56 @@
+" ~/.ideavimrc - IdeaVim config for PyCharm (macOS)
+" Adapted from tarikwaleed/dotfiles (Ubuntu .vimrc/.ideavimrc), trimmed to
+" what IdeaVim actually supports - no Vundle, no real-Vim-only plugins.
+
+let mapleader=" "
+
+" -- editing --
+inoremap jk <Esc>
+inoremap JK <Esc>
+inoremap <leader>; <C-o>A;<Esc>
+inoremap <leader>[ <C-o>A{<CR>
+nnoremap <space> za
+
+" -- window / tab navigation --
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap fk :tabnext<CR>
+nnoremap fj :tabprev<CR>
+nnoremap fh :tabfirst<CR>
+nnoremap fl :tablast<CR>
+
+" -- reload config --
+nnoremap <leader>~ :source ~/.ideavimrc<CR>
+
+" -- PyCharm actions (this is the "don't leave the editor" section) --
+nmap <leader>r <action>(Run)
+nmap <leader>d <action>(Debug)
+nmap <leader>g <action>(Generate)
+nmap <leader>o <action>(OverrideMethods)
+nmap <leader>l <action>(FindInPath)
+nmap <leader>f <action>(GotoFile)
+nmap <leader>t <action>(ActivateTerminalToolWindow)
+nmap <Tab> <action>(ActivateProjectToolWindow)
+nmap <leader>\ <action>(SplitVertically)
+nmap <leader>- <action>(SplitHorizontally)
+nmap <leader>u <action>(Unsplit)
+nmap <leader>j <action>(MethodDown)
+nmap <leader>k <action>(MethodUp)
+nnoremap <leader>x :action CloseEditor<CR>
+nmap fl <action>(NextSplitter)
+nmap fh <action>(PrevSplitter)
+
+" -- IdeaVim plugin emulation (built-in, no package manager needed) --
+set surround
+set commentary
+set multiple-cursors
+set NERDTree
+
+" -- settings --
+set number relativenumber
+set clipboard=unnamed
+set ideajoin
+set incsearch
+set hlsearch
