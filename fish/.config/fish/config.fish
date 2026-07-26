@@ -133,6 +133,27 @@ alias dm 'python -Wa manage.py migrate'
 alias dmm 'python -Wa manage.py makemigrations'
 alias dt 'python -Wa manage.py test'
 
+# --- credential shortcuts ---
+# These just `cat` a file and copy it to the clipboard - the paths below hold
+# no secrets themselves. The actual files under ~/secrets/creds/ are NOT part
+# of this repo (same as on the Ubuntu machine) - create that folder yourself
+# and drop the real values in, e.g. from your password manager.
+alias ubuntu-access-token 'cat ~/secrets/creds/ubuntu-access-token | copy'
+alias bitbucket-app-password 'cat ~/secrets/creds/bitbucket-app-password | copy'
+alias mostaql1-creds 'cat ~/secrets/creds/mostaql1-creds | copy'
+alias shop2game-creds 'cat ~/secrets/creds/shop2game-creds | copy'
+alias amana-vpn-password 'cat ~/secrets/creds/amana-vpn-password | copy'
+alias amana-linux-creds 'cat ~/secrets/creds/amana-linux-creds | copy'
+alias amana-rdp-password 'cat ~/secrets/creds/amana-rdp-password | copy'
+alias amana-rdp-creds 'cat ~/secrets/creds/amana-rdp-creds | copy'
+alias amana-rdp-ips 'cat ~/secrets/creds/amana-rdp-ips | copy'
+alias amana-droplet-ip 'cat ~/secrets/creds/amana-droplet-ip | copy'
+alias murbaa-droplet-ip 'cat ~/secrets/creds/murbaa-droplet-ip | copy'
+alias amana-frontend-droplet-ip 'cat ~/secrets/creds/amana-frontend-droplet-ip | copy'
+alias amana-database-droplet-ip 'cat ~/secrets/creds/amana-database-droplet-ip | copy'
+alias gannmath-ip 'cat ~/secrets/creds/gannmath-ip | copy'
+alias ridy-ip 'cat ~/secrets/creds/ridy-ip | copy'
+
 # --- machine-local secrets/overrides - not tracked in git, kept outside the stow repo ---
 if test -f ~/.fish_local.fish
     source ~/.fish_local.fish
