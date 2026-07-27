@@ -10,7 +10,7 @@ local appHotkeys = {
   C = "ClickUp",
   P = "Postman",
   E = "PyCharm CE",
-  N = "Finder",
+  N = "Obsidian",
   V = "Preview",
 }
 
