@@ -11,7 +11,6 @@ local appHotkeys = {
   P = "Postman",
   E = "PyCharm CE",
   N = "Obsidian",
-  V = "Preview",
 }
 
 for key, appName in pairs(appHotkeys) do
