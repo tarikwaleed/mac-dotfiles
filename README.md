@@ -10,20 +10,26 @@ Each top-level folder is a Stow "package" whose contents mirror `$HOME`:
 
 ```
 mac-dotfiles/
-├── ideavim/.ideavimrc   # IdeaVim config for PyCharm
+├── ideavim/.ideavimrc               # IdeaVim config for PyCharm
 ├── zsh/.zshrc
 ├── git/.gitconfig
-└── tmux/.tmux.conf
+├── tmux/.tmux.conf
+└── hammerspoon/.hammerspoon/init.lua  # Cmd+Opt+<letter> app-switch hotkeys
 ```
 
 ## Usage
 
 ```bash
 brew install stow
+brew install --cask hammerspoon   # only needed for the hammerspoon package
 git clone https://github.com/tarikwaleed/mac-dotfiles.git ~/mac-dotfiles
 cd ~/mac-dotfiles
-stow ideavim zsh git tmux
+stow ideavim zsh git tmux hammerspoon
 ```
+
+Hammerspoon needs Accessibility permission to intercept hotkeys: System Settings →
+Privacy & Security → Accessibility → enable Hammerspoon (one-time, manual — macOS
+doesn't allow granting this from the command line).
 
 This symlinks each file into `$HOME` (e.g. `~/.zshrc -> mac-dotfiles/zsh/.zshrc`).
 
