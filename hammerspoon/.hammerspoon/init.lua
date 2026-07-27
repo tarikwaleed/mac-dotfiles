@@ -6,10 +6,10 @@ hs.allowAppleScript(true)
 local appHotkeys = {
   S = "Slack",
   T = "Terminal",
-  C = "Google Chrome",
-  F = "Firefox",
+  F = "Google Chrome",
+  C = "ClickUp",
   P = "Postman",
-  Y = "PyCharm CE",
+  E = "PyCharm CE",
   N = "Finder",
   V = "Preview",
 }
