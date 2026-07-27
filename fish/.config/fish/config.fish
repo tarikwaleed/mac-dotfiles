@@ -16,6 +16,10 @@ fish_add_path ~/.pub-cache/bin
 
 fish_vi_key_bindings
 
+# --- vim-style jk to exit insert mode ---
+set -g fish_sequence_key_delay_ms 200
+bind -M insert jk 'set fish_bind_mode default; commandline -f backward-char force-repaint'
+
 if command -q pyenv
     pyenv init - | source
 end
