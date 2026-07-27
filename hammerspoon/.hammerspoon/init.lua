@@ -1,8 +1,8 @@
 hs.allowAppleScript(true)
 
 -- App-switching hotkeys, ported from the GNOME Alt+<letter> setup in ../dotfiles/dconf.
--- macOS reserves bare Cmd+<letter> for Save/Copy/Paste/Find etc. system-wide, so these
--- use Cmd+Option+<letter> instead to avoid clobbering every app's native shortcuts.
+-- Bare Cmd+<letter> is used intentionally; this overrides macOS's native Cmd+<letter>
+-- shortcuts (Save, Copy, Paste, Find, etc.) system-wide.
 local appHotkeys = {
   S = "Slack",
   T = "Terminal",
@@ -15,7 +15,7 @@ local appHotkeys = {
 }
 
 for key, appName in pairs(appHotkeys) do
-  hs.hotkey.bind({"cmd", "alt"}, key, function()
+  hs.hotkey.bind({"cmd"}, key, function()
     hs.application.launchOrFocus(appName)
   end)
 end
