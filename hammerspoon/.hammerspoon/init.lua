@@ -19,9 +19,9 @@ for key, appName in pairs(appHotkeys) do
   end)
 end
 
--- Ctrl+A/C/V as select-all/copy/paste (Linux/Windows muscle memory), sent as the
--- underlying Cmd+<key> the app actually expects. Disabled while Terminal is frontmost,
--- since shells use Ctrl+A (start of line) and Ctrl+C (SIGINT) natively.
+-- Caps Lock (remapped to send Control at the OS level, see mac-dotfiles README) + A/C/V
+-- for select-all/copy/paste. Disabled while Terminal is frontmost, since shells use
+-- Ctrl+A (start of line) and Ctrl+C (SIGINT) natively via the same physical key.
 local ctrlToCmdKeys = {"a", "c", "v"}
 local ctrlToCmdHotkeys = {}
 
